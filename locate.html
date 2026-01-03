@@ -132,20 +132,21 @@
   </script>
 <script src="./home.js"></script>
 <script>
-  // Navbar scroll effect - fade from transparent to solid
+  // Navbar scroll effect - transparent initially, ash background when scrolled
   window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     const scrollPosition = window.scrollY;
+    const locateSection = document.querySelector('#locate-us');
+    const locateHeight = locateSection ? locateSection.offsetHeight : 0;
     
-    // Start fading when scrolling past 50px, fully solid by 200px
-    if (scrollPosition > 50) {
-      const opacity = Math.min((scrollPosition - 50) / 150, 1); // Fade from 0 to 1 over 150px
-      navbar.style.backgroundColor = `rgba(30, 26, 62, ${0.95 * opacity})`;
-      navbar.style.backdropFilter = `blur(${10 * opacity}px)`;
-      navbar.style.webkitBackdropFilter = `blur(${10 * opacity}px)`;
+    // Show ash background with 50% transparency when scrolled past the header section
+    if (scrollPosition > locateHeight) {
+      navbar.style.backgroundColor = 'rgba(128, 128, 128, 0.5)';
+      navbar.style.backdropFilter = 'blur(5px)';
+      navbar.style.webkitBackdropFilter = 'blur(5px)';
       navbar.classList.add('scrolled');
     } else {
-      navbar.style.backgroundColor = 'rgba(30, 26, 62, 0)';
+      navbar.style.backgroundColor = 'rgba(0, 0, 0, 0)';
       navbar.style.backdropFilter = 'blur(0px)';
       navbar.style.webkitBackdropFilter = 'blur(0px)';
       navbar.classList.remove('scrolled');
