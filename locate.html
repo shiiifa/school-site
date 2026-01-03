@@ -34,73 +34,13 @@
       
 </style>
 <body>
-    <header>
-        <div class="container">
-            <div id="header-content">
-                <div id="left-header">
-                    <i class="fa-sharp fa-solid fa-building-columns logo"></i>
-                    <p>Senators' Montessori</p>
-                </div>
-                <div id="right-header">
-                    <a href="#">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-google-plus-g"></i>
-                    </a>
-                    <p style="color:red">Apply Now</p>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section id="sub-header">
-        <div class="container">
-            <div id="sub-header-content">
-                <div id="sub-header-left">
-                    <i class="fa-solid fa-envelope-open-text"></i>
-                    <div>
-                        <p class="lg-b">Mail Us</p>
-                        <p>sms@gmail.com</p>
-                    </div>
-                </div>
-                <div id="sub-header-mid">
-                    <i class="fa-sharp fa-solid fa-building-columns logo"></i>
-                    <div>
-                        <h2 class="animate-character">Senators' Montessori</h2>
-                        <p style="font-size: 14px; font-weight: bolder;">Get wisdom, get understanding (PROVERBS 4:5)</p>
-                    </div>
-                    
-                </div>
-                <div id="sub-header-right">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <div>
-                        <p  class="lg-b">Call us</p>
-                        <p>+233 555 388 901</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <div class="navbar" id="myNavbar">
         <div class="container">
             <a href="./index.html">Home</a>
-            <a href="./index.html">About</a>
+            <a href="./index.html#about">About</a>
+            <a href="./index.html#stats">Achievements</a>
             <a href="./locate.html">Locate Us</a>
-            <div class="dropdown">
-                <button class="dropbtn">Gallery 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="./images.html">Images</a>
-                    <a href="#link2">Videos</a>
-                </div>
-            </div>
+            <a href="./images.html">Gallery</a>
             <a href="./locate.html">Contact</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -186,7 +126,30 @@
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init();
+    AOS.init({
+      once: true
+    });
   </script>
-<script src="./index.js"></script>
+<script src="./home.js"></script>
+<script>
+  // Navbar scroll effect - fade from transparent to solid
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    const scrollPosition = window.scrollY;
+    
+    // Start fading when scrolling past 50px, fully solid by 200px
+    if (scrollPosition > 50) {
+      const opacity = Math.min((scrollPosition - 50) / 150, 1); // Fade from 0 to 1 over 150px
+      navbar.style.backgroundColor = `rgba(30, 26, 62, ${0.95 * opacity})`;
+      navbar.style.backdropFilter = `blur(${10 * opacity}px)`;
+      navbar.style.webkitBackdropFilter = `blur(${10 * opacity}px)`;
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.style.backgroundColor = 'rgba(30, 26, 62, 0)';
+      navbar.style.backdropFilter = 'blur(0px)';
+      navbar.style.webkitBackdropFilter = 'blur(0px)';
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
 </html>

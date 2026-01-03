@@ -125,11 +125,20 @@ header li{
 
   /* Navbar styles */
   .navbar {
-    background-color: #1e1a3e;
+    background-color: rgba(30, 26, 62, 0);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
     overflow: hidden;
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(30, 26, 62, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   
   .navbar .container {
