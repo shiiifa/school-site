@@ -565,6 +565,18 @@ header li{
     align-items: center;
   }
 
+  /* Proprietor's Message Quote Styling */
+  #main-message p {
+    font-style: italic;
+    position: relative;
+    margin-top: 30px;
+  }
+
+  #main-message p em {
+    font-style: italic;
+    display: inline;
+  }
+
   /* Footer styles */
 footer {
   background-color: #1e1a3e;
@@ -1002,6 +1014,10 @@ footer ul li a:hover{
       max-width: 100% !important;
       padding: 0 10px;
       word-wrap: break-word;
+    }
+    
+    #messages p em {
+      font-style: italic;
     }
     
     .container {
