@@ -132,6 +132,12 @@ header li{
     z-index: 100;
   }
   
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
   .navbar a {
     float: left;
     color: #fff;
@@ -141,6 +147,10 @@ header li{
     padding-right: 40px;
     text-decoration: none;
     font-size: 17px;
+  }
+  
+  .navbar a.icon {
+    float: right;
   }
   
   .dropdown {
@@ -196,6 +206,10 @@ header li{
   /* Hamburger menu styles */
   .icon {
     display: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 16px;
+    cursor: pointer;
   }
 
   /*background section*/
@@ -228,6 +242,8 @@ header li{
     height: 100%;
     text-align: center;
     color: #fff;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
   .bac-flex h1{
@@ -250,6 +266,8 @@ header li{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   .buttons a{
     text-decoration: none;
@@ -902,17 +920,33 @@ footer ul li a:hover{
     }
 }
 
+  @media screen and (max-width: 768px) {
+    /* Hide sub-header on mobile */
+    #sub-header {
+      display: none;
+    }
+    
+    /* Fix navbar positioning */
+    .navbar {
+      top: 0;
+    }
+  }
+
   @media screen and (max-width: 600px) {
-    .navbar a:not(:first-child), .dropdown .dropbtn {
+    .navbar a:not(.icon), .dropdown .dropbtn {
       display: none;
     }
     .navbar a.icon {
       float: right;
-      display: block;
+      display: block !important;
+    }
+    
+    .navbar .container {
+      justify-content: flex-end;
     }
 
     .navbar.responsive {
-        position: relative;
+        position: sticky;
       }
       .navbar.responsive .icon {
         position: absolute;
@@ -921,8 +955,9 @@ footer ul li a:hover{
       }
       .navbar.responsive a {
         float: none;
-        display: block;
+        display: block !important;
         text-align: left;
+        padding: 12px 16px;
       }
       .navbar.responsive .dropdown {
         float: none;
@@ -935,11 +970,52 @@ footer ul li a:hover{
         width: 100%;
         text-align: left;
       }
+      
+    /* Fix text overflow */
+    #messages p {
+      width: 95% !important;
+      max-width: 100% !important;
+      padding: 0 10px;
+      word-wrap: break-word;
+    }
+    
+    .container {
+      max-width: 95vw;
+      padding: 0 10px;
+    }
+    
+    #about p {
+      width: 95% !important;
+      max-width: 100% !important;
+      padding: 0 10px;
+      word-wrap: break-word;
+    }
+    
+    .bac-flex h1 {
+      font-size: 20px !important;
+      padding: 0 10px;
+      word-wrap: break-word;
+    }
+    
+    .bac-flex .sub p {
+      font-size: 12px !important;
+      padding: 0 10px;
+      word-wrap: break-word;
+    }
+    
+    .course-info .main,
+    .info {
+      width: 100% !important;
+      max-width: 100%;
+      padding: 0 10px;
+    }
   }
 
   @media screen and (max-width: 530px) {
     .info{
-        width: 280px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
       }
 
       .loc-box div i{
@@ -950,6 +1026,18 @@ footer ul li a:hover{
       .loc-box div p{
         font-size: 14px;
       }
+      
+    /* Fix course info text */
+    .course-info {
+      width: 100%;
+      padding: 0 10px;
+    }
+    
+    .course-info .main {
+      width: 100% !important;
+      max-width: 100%;
+      word-wrap: break-word;
+    }
   }
 
   @media screen and (max-width: 500px) {
@@ -983,13 +1071,17 @@ footer ul li a:hover{
         margin-bottom: 10px;
     }
 
-    .bac-flex p{
-        display: none;
+    .bac-flex .sub p{
+        font-size: 12px !important;
+        padding: 0 10px;
     }
 
     .buttons a{
-        padding: 10x 15px;
+        padding: 10px 15px;
         font-size: 14px;
+        margin-right: 0;
+        word-wrap: break-word;
+        text-align: center;
     }
 
     .locate-content h3{
