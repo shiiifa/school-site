@@ -176,6 +176,24 @@ header li{
     -webkit-backdrop-filter: blur(5px);
     position: fixed;
   }
+
+  /* Logo container */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+  }
+
+  .school-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+  }
   
   .navbar .container {
     display: flex;
@@ -701,6 +719,29 @@ footer ul li a {
 
 footer ul li a:hover{
   color: #ddd;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ddd;
+}
+
+.social-link i {
+  font-size: 20px;
 }
 
 .footer-bottom {
