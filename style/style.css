@@ -129,8 +129,11 @@ header li{
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     overflow: hidden;
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 100;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
   }
@@ -139,6 +142,7 @@ header li{
     background-color: rgba(128, 128, 128, 0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    position: fixed;
   }
   
   .navbar .container {
@@ -227,6 +231,7 @@ header li{
     height: 100vh;
     width: 100%;
     position: relative;
+    margin-top: 0;
   }
 
   .overlay{
@@ -960,7 +965,15 @@ footer ul li a:hover{
     
     /* Fix navbar positioning */
     .navbar {
+      position: absolute;
       top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+    
+    .navbar.scrolled {
+      position: fixed;
     }
   }
 
@@ -980,7 +993,11 @@ footer ul li a:hover{
     }
 
     .navbar.responsive {
-        position: sticky;
+        position: absolute;
+      }
+      
+      .navbar.responsive.scrolled {
+        position: fixed;
       }
       
       .navbar.responsive .container {

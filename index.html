@@ -273,14 +273,16 @@
         const heroSection = document.querySelector('#back-sec');
         const heroHeight = heroSection ? heroSection.offsetHeight : 0;
         
-        // When over the hero image, keep it transparent
-        // When scrolled past the hero, show ash background with 50% transparency
+        // When over the hero image, keep it transparent and absolutely positioned
+        // When scrolled past the hero, show ash background with 50% transparency and make it fixed
         if (scrollPosition > heroHeight) {
+          navbar.style.position = 'fixed';
           navbar.style.backgroundColor = 'rgba(128, 128, 128, 0.5)';
           navbar.style.backdropFilter = 'blur(5px)';
           navbar.style.webkitBackdropFilter = 'blur(5px)';
           navbar.classList.add('scrolled');
         } else {
+          navbar.style.position = 'absolute';
           navbar.style.backgroundColor = 'rgba(0, 0, 0, 0)';
           navbar.style.backdropFilter = 'blur(0px)';
           navbar.style.webkitBackdropFilter = 'blur(0px)';
