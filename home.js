@@ -1,9 +1,20 @@
 function myFunction() {
     var x = document.getElementById("myNavbar");
+    var icon = document.querySelector('.navbar .icon i');
     if (x.className === "navbar") {
       x.className += " responsive";
+      // Change hamburger to X
+      if (icon) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      }
     } else {
       x.className = "navbar";
+      // Change X back to hamburger
+      if (icon) {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
     }
   }
 

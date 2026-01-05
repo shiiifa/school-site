@@ -188,14 +188,15 @@ header li{
     display: flex;
     align-items: center;
     flex: 0 0 auto;
+    gap: 10px;
   }
 
   .navbar-social {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
     margin-left: auto;
-    padding-right: 20px;
+    padding-right: 10px;
   }
 
   .navbar-social a {
@@ -216,7 +217,7 @@ header li{
     text-align: center;
     padding-top:16px;
     padding-bottom: 16px;
-    padding-right: 40px;
+    padding-right: 50px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -227,7 +228,7 @@ header li{
     text-align: center;
     padding-top:16px;
     padding-bottom: 16px;
-    padding-right: 40px;
+    padding-right: 50px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -293,6 +294,11 @@ header li{
     font-size: 24px;
     padding: 16px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .icon i.fa-times {
+    font-size: 24px;
   }
 
   /*background section*/
@@ -337,14 +343,14 @@ header li{
     height: 100%;
     text-align: center;
     color: #fff;
-    padding: 20px 10px 0 10px;
+    padding: 10px 10px 0 10px;
     box-sizing: border-box;
     align-items: center;
   }
 
   .school-logo-container{
     margin-bottom: 20px;
-    margin-top: -40px;
+    margin-top: -60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -591,6 +597,9 @@ header li{
   .course{
     width:350px;
     margin-bottom: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #courses{
@@ -621,16 +630,35 @@ header li{
   }
 
   .course-img{
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .course-img img{
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     margin-bottom: 25px;
+    border-radius: 8px;
+  }
+
+  .course-img .ig1{
+    height: 250px;
+    object-fit: cover;
   }
 
   .info li{
     list-style: none;
+  }
+
+  #courses .course-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #courses .course-info h4{
@@ -639,21 +667,24 @@ header li{
     font-size: 18px;
     font-weight: bold;
     color: #fff;
+    width: 100%;
   }
 
   #courses .course-info .main{
     text-align: center;
     padding-bottom: 25px;
-    width: 300px;
-    margin: auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     color: rgba(255, 255, 255, 0.829);
   }
 
   .info{
     display: flex;
     justify-content: space-between;
-    width: 300px;
-    margin: auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   #courses .info h5,
@@ -667,10 +698,7 @@ header li{
         grid-template-rows: 1fr;
         grid-column-gap: 15px;
         grid-row-gap: 0px;
-  }
-
-  .ig1{
-    height: 254px;
+        align-items: start;
   }
 
   /*Achieve section*/
@@ -979,19 +1007,22 @@ footer ul li a:hover{
       }
 
       .course-img{
-        width: 280px;
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .course-img img{
+        height: 200px;
       }
 
       .course-info .main{
-        width: 250px;
+        width: 100%;
+        max-width: 250px;
       }
 
       .info{
-        width: 250px;
-      }
-
-      .ig1{
-        height: 185px;
+        width: 100%;
+        max-width: 250px;
       }
   }
 
@@ -1138,21 +1169,23 @@ footer ul li a:hover{
   }
 
   .course-img{
-    width: 80%;
+    width: 100%;
+    max-width: 350px;
     margin: auto;
   }
 
+  .course-img img{
+    height: 250px;
+  }
+
   .course-info .main{
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
   }
 
   .info{
-    width: 350px;
-  }
-
-  .ig1{
-    height: 304px;
-    object-fit: cover;
+    width: 100%;
+    max-width: 350px;
   }
 
 }
@@ -1212,25 +1245,36 @@ footer ul li a:hover{
   }
 
   @media screen and (max-width: 600px) {
+    .navbar-links {
+      display: none;
+    }
     .navbar-links a:not(.icon), .dropdown .dropbtn {
       display: none;
     }
     .navbar-social {
-      display: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+      padding-right: 10px;
     }
     .navbar a.icon {
-      float: right;
+      float: left;
       display: block !important;
       position: relative;
     }
     
     .navbar .container {
-      justify-content: flex-end;
+      justify-content: space-between;
       position: relative;
     }
 
     .navbar.responsive {
         position: absolute;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
       }
       
       .navbar.responsive.scrolled {
@@ -1240,17 +1284,37 @@ footer ul li a:hover{
       .navbar.responsive .container {
         flex-direction: column;
         align-items: stretch;
+        width: 100%;
+      }
+
+      .navbar.responsive .navbar-links {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+        order: 2;
       }
       
       .navbar.responsive .icon {
         position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 101;
+        order: 1;
+      }
+
+      .navbar.responsive .navbar-social {
+        position: absolute;
         right: 0;
         top: 0;
         z-index: 101;
+        order: 1;
+        display: flex;
+        padding: 16px;
+        gap: 15px;
+        border: none;
       }
       
-      .navbar.responsive .navbar-links a,
-      .navbar.responsive a {
+      .navbar.responsive .navbar-links a {
         float: none !important;
         display: block !important;
         text-align: left;
@@ -1258,17 +1322,11 @@ footer ul li a:hover{
         width: 100%;
         box-sizing: border-box;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 16px;
       }
       
-      .navbar.responsive a:last-child {
-        border-bottom: none;
-      }
-
-      .navbar.responsive .navbar-social {
-        display: flex;
-        justify-content: center;
-        padding: 15px 16px;
-        gap: 20px;
+      .navbar.responsive .navbar-links a:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       }
       
       .navbar.responsive .dropdown {
