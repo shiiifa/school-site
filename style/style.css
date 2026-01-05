@@ -595,11 +595,13 @@ header li{
 
   /*Courses*/
   .course{
-    width:350px;
+    width: 100%;
+    max-width: 350px;
     margin-bottom: 190px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
   }
 
   #courses{
@@ -685,6 +687,24 @@ header li{
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .info li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+  }
+
+  .info li h5{
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .info li p{
+    margin: 0;
   }
 
   #courses .info h5,
@@ -696,9 +716,10 @@ header li{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
-        grid-column-gap: 15px;
+        grid-column-gap: 20px;
         grid-row-gap: 0px;
         align-items: start;
+        justify-items: center;
   }
 
   /*Achieve section*/
