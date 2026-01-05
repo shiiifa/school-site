@@ -706,27 +706,34 @@ header li{
     max-width: 300px;
     margin: 15px auto 0;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
     transition: all 0.3s ease;
+    padding: 15px 0;
   }
 
   .info li{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    text-align: left;
+    text-align: center;
     flex: 1;
-    gap: 5px;
+    gap: 8px;
   }
 
   .info li h5{
     margin: 0;
     font-weight: bold;
-    margin-right: 5px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   .info li p{
     margin: 0;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
   }
 
   #courses .info h5,
