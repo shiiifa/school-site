@@ -602,6 +602,7 @@ header li{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    height: 100%;
   }
 
   #courses{
@@ -661,6 +662,8 @@ header li{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
+    justify-content: space-between;
   }
 
   #courses .course-info h4{
@@ -670,6 +673,10 @@ header li{
     font-weight: bold;
     color: #fff;
     width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #courses .course-info .main{
@@ -679,6 +686,10 @@ header li{
     max-width: 300px;
     margin: 0 auto;
     color: rgba(255, 255, 255, 0.829);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .info{
@@ -721,7 +732,7 @@ header li{
         grid-template-rows: 1fr;
         grid-column-gap: 20px;
         grid-row-gap: 0px;
-        align-items: start;
+        align-items: stretch;
         justify-items: center;
   }
 
