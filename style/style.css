@@ -465,16 +465,27 @@ header li{
     margin-bottom: 190px;
   }
 
+  #courses{
+    background-color: #070131;
+    color: rgba(255, 255, 255, 0.829);
+    padding: 100px 0px;
+    margin-bottom: 0;
+  }
+
   #courses h3{
     font-size: 24px;
     font-weight: bold;
-    color: #1e1a3e;
+    color: #fff;
   }
 
   #courses h3,
   #courses .cent{
     text-align: center;
     padding-bottom: 10px;
+  }
+
+  #courses .cent{
+    color: rgba(255, 255, 255, 0.829);
   }
 
   #courses .line-bod{
@@ -494,19 +505,20 @@ header li{
     list-style: none;
   }
 
-  .course-info h4{
+  #courses .course-info h4{
     text-align: center;
     padding-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
-    color: red;
+    color: #fff;
   }
 
-  .course-info .main{
+  #courses .course-info .main{
     text-align: center;
     padding-bottom: 25px;
     width: 300px;
     margin: auto;
+    color: rgba(255, 255, 255, 0.829);
   }
 
   .info{
@@ -514,6 +526,11 @@ header li{
     justify-content: space-between;
     width: 300px;
     margin: auto;
+  }
+
+  #courses .info h5,
+  #courses .info p{
+    color: rgba(255, 255, 255, 0.829);
   }
 
   #courses-content{
