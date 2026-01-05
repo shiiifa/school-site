@@ -152,7 +152,7 @@
                         <h4>Nursery & Kindergarten</h4>
                         <p class="main">Where every child's journey begins! We provide a nurturing and engaging environment that sparks curiosity and ignites a love for learning</p>
                         <a href="javascript:void(0);" class="more-btn" onclick="toggleCourseInfo(this)">More</a>
-                        <div class="info" style="display: none;">
+                        <div class="info">
                             <li>
                                 <h5>Course Time</h5>
                                 <p> 4 years</p>
@@ -177,7 +177,7 @@
                         <h4>Primary</h4>
                         <p class="main">We believe in laying a strong academic foundation while nurturing well-rounded individuals</p>
                         <a href="javascript:void(0);" class="more-btn" onclick="toggleCourseInfo(this)">More</a>
-                        <div class="info" style="display: none;">
+                        <div class="info">
                             <li>
                                 <h5>Course Time</h5>
                                 <p> 6 years</p>
@@ -202,7 +202,7 @@
                         <h4>Junior High</h4>
                         <p class="main"> Where young minds thrive and passions ignite! Our experienced faculty fosters a dynamic and challenging learning environment that encourages independent thinking, problem-solving, and collaboration.</p>
                         <a href="javascript:void(0);" class="more-btn" onclick="toggleCourseInfo(this)">More</a>
-                        <div class="info" style="display: none;">
+                        <div class="info">
                             <li>
                                 <h5>Course Time</h5>
                                 <p> 3 years</p>
@@ -295,12 +295,12 @@
       // Toggle course info dropdown
       function toggleCourseInfo(btn) {
         const info = btn.nextElementSibling;
-        if (info.style.display === "none" || info.style.display === "") {
-          info.style.display = "flex";
-          btn.textContent = "Less";
-        } else {
-          info.style.display = "none";
+        if (info.classList.contains('show')) {
+          info.classList.remove('show');
           btn.textContent = "More";
+        } else {
+          info.classList.add('show');
+          btn.textContent = "Less";
         }
       }
       
