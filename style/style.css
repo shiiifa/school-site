@@ -176,24 +176,6 @@ header li{
     -webkit-backdrop-filter: blur(5px);
     position: fixed;
   }
-
-  /* Logo container */
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    background-color: #fff;
-    width: 100%;
-    position: relative;
-    z-index: 99;
-  }
-
-  .school-logo {
-    max-width: 150px;
-    height: auto;
-    display: block;
-  }
   
   .navbar .container {
     display: flex;
@@ -319,6 +301,20 @@ header li{
     color: #fff;
     padding: 80px 10px 0 10px;
     box-sizing: border-box;
+    align-items: center;
+  }
+
+  .school-logo-container{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .school-logo-hero{
+    max-width: 200px;
+    height: auto;
+    display: block;
   }
 
   .bac-flex h1{
@@ -725,6 +721,7 @@ footer ul li a:hover{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .social-link {
@@ -1026,6 +1023,10 @@ footer ul li a:hover{
 }
 
 @media screen and (max-width: 660px) {
+    .school-logo-hero{
+      max-width: 150px;
+    }
+
     .bac-flex h1{
         font-size: 28px;
     }
@@ -1167,6 +1168,10 @@ footer ul li a:hover{
       word-wrap: break-word;
     }
     
+    .school-logo-hero{
+      max-width: 120px !important;
+    }
+
     .bac-flex h1 {
       font-size: 24px !important;
       padding: 0 10px;
