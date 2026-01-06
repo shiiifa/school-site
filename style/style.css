@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* General header element styles */
@@ -471,14 +472,14 @@ header li{
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .proprietor-message-text-centered {
     max-width: 800px;
     width: 100%;
     text-align: center;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .proprietor-quote-centered {
@@ -490,13 +491,13 @@ header li{
     margin: 0 auto;
     position: relative;
     padding: 0 20px;
-    overflow: visible;
+    overflow: hidden;
     max-height: none;
     height: auto;
   }
 
   #messages {
-    overflow: visible;
+    overflow: hidden;
   }
 
   .proprietor-quote-centered .quote-start {
