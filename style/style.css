@@ -661,16 +661,32 @@ header li{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 200px;
+    min-height: 120px;
+    justify-content: flex-start;
   }
 
   #courses .course-info h4{
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
     width: 100%;
+    margin: 0;
+  }
+
+  .course-details {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease, padding 0.4s ease;
+    width: 100%;
+  }
+
+  .course-details.show {
+    opacity: 1;
+    max-height: 500px;
+    padding: 0 0 15px 0;
   }
 
   #courses .course-info .main{
@@ -680,7 +696,6 @@ header li{
     max-width: 300px;
     margin: 0 auto;
     color: rgba(255, 255, 255, 0.829);
-    min-height: 60px;
   }
 
   .more-btn {
@@ -690,7 +705,7 @@ header li{
     padding: 8px 20px;
     border-radius: 4px;
     text-decoration: none;
-    margin: 0 auto 15px;
+    margin: 0;
     transition: background-color 0.3s ease;
     cursor: pointer;
     font-size: 14px;
@@ -710,17 +725,7 @@ header li{
     margin: 0 auto;
     align-items: flex-start;
     gap: 15px;
-    padding: 15px 0;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.4s ease, max-height 0.4s ease, padding 0.4s ease;
-  }
-
-  .info.show {
-    opacity: 1;
-    max-height: 200px;
-    padding: 15px 0;
+    padding: 15px 0 0 0;
   }
 
   .info li{

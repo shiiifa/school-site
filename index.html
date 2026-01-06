@@ -150,22 +150,24 @@
                     </div>
                     <div class="course-info">
                         <h4>Nursery & Kindergarten</h4>
-                        <p class="main">Where every child's journey begins! We provide a nurturing and engaging environment that sparks curiosity and ignites a love for learning</p>
-                        <a href="javascript:void(0);" class="more-btn" onclick="toggleCourseInfo(this)">More</a>
-                        <div class="info">
-                            <li>
-                                <h5>Course Time</h5>
-                                <p> 4 years</p>
-                            </li>
-                            <li>
-                                <h5>Age</h5>
-                                <p>3-6 years</p>
-                            </li>
-                            <li>
-                                <h5>Duration</h5>
-                                <p>8:30-16:00</p>
-                            </li>
+                        <div class="course-details">
+                            <p class="main">Where every child's journey begins! We provide a nurturing and engaging environment that sparks curiosity and ignites a love for learning</p>
+                            <div class="info">
+                                <li>
+                                    <h5>Course Time</h5>
+                                    <p> 4 years</p>
+                                </li>
+                                <li>
+                                    <h5>Age</h5>
+                                    <p>3-6 years</p>
+                                </li>
+                                <li>
+                                    <h5>Duration</h5>
+                                    <p>8:30-16:00</p>
+                                </li>
+                            </div>
                         </div>
+                        <a href="javascript:void(0);" class="more-btn" onclick="toggleCourseInfo(this)">More</a>
                     </div>
                 </div>
                 <div class="course" data-aos="fade"
@@ -175,22 +177,24 @@
                     </div>
                     <div class="course-info">
                         <h4>Primary</h4>
-                        <p class="main">We believe in laying a strong academic foundation while nurturing well-rounded individuals</p>
-                        <a href="javascript:void(0);" class="more-btn" onclick="toggleCourseInfo(this)">More</a>
-                        <div class="info">
-                            <li>
-                                <h5>Course Time</h5>
-                                <p> 6 years</p>
-                            </li>
-                            <li>
-                                <h5>Age</h5>
-                                <p>7-11 years</p>
-                            </li>
-                            <li>
-                                <h5>Duration</h5>
-                                <p>8:30-16:00</p>
-                            </li>
+                        <div class="course-details">
+                            <p class="main">We believe in laying a strong academic foundation while nurturing well-rounded individuals</p>
+                            <div class="info">
+                                <li>
+                                    <h5>Course Time</h5>
+                                    <p> 6 years</p>
+                                </li>
+                                <li>
+                                    <h5>Age</h5>
+                                    <p>7-11 years</p>
+                                </li>
+                                <li>
+                                    <h5>Duration</h5>
+                                    <p>8:30-16:00</p>
+                                </li>
+                            </div>
                         </div>
+                        <a href="javascript:void(0);" class="more-btn" onclick="toggleCourseInfo(this)">More</a>
                     </div>
                 </div>
                 <div class="course" data-aos="fade"
@@ -200,22 +204,24 @@
                     </div>
                     <div class="course-info">
                         <h4>Junior High</h4>
-                        <p class="main"> Where young minds thrive and passions ignite! Our experienced faculty fosters a dynamic and challenging learning environment that encourages independent thinking, problem-solving, and collaboration.</p>
-                        <a href="javascript:void(0);" class="more-btn" onclick="toggleCourseInfo(this)">More</a>
-                        <div class="info">
-                            <li>
-                                <h5>Course Time</h5>
-                                <p> 3 years</p>
-                            </li>
-                            <li>
-                                <h5>Age</h5>
-                                <p>12-14 years</p>
-                            </li>
-                            <li>
-                                <h5>Duration</h5>
-                                <p>8:30-16:00</p>
-                            </li>
+                        <div class="course-details">
+                            <p class="main"> Where young minds thrive and passions ignite! Our experienced faculty fosters a dynamic and challenging learning environment that encourages independent thinking, problem-solving, and collaboration.</p>
+                            <div class="info">
+                                <li>
+                                    <h5>Course Time</h5>
+                                    <p> 3 years</p>
+                                </li>
+                                <li>
+                                    <h5>Age</h5>
+                                    <p>12-14 years</p>
+                                </li>
+                                <li>
+                                    <h5>Duration</h5>
+                                    <p>8:30-16:00</p>
+                                </li>
+                            </div>
                         </div>
+                        <a href="javascript:void(0);" class="more-btn" onclick="toggleCourseInfo(this)">More</a>
                     </div>
                 </div>
             </div>
@@ -294,12 +300,13 @@
       
       // Toggle course info dropdown
       function toggleCourseInfo(btn) {
-        const info = btn.nextElementSibling;
-        if (info.classList.contains('show')) {
-          info.classList.remove('show');
+        const courseInfo = btn.parentElement;
+        const courseDetails = courseInfo.querySelector('.course-details');
+        if (courseDetails.classList.contains('show')) {
+          courseDetails.classList.remove('show');
           btn.textContent = "More";
         } else {
-          info.classList.add('show');
+          courseDetails.classList.add('show');
           btn.textContent = "Less";
         }
       }
