@@ -188,8 +188,8 @@ header li{
     display: flex;
     align-items: center;
     flex: 0 0 auto;
-    margin-left: -10px;
-    padding-left: 10px;
+    margin-left: -30px;
+    padding-left: 0;
   }
 
   .navbar-logo-img {
@@ -1217,28 +1217,65 @@ body {
   justify-content: center;
 }
 
-.locate-content{
-  height: 100%;
+.locate-contact-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+}
+
+.locate-content{
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: transparent;
   gap: 20px;
 }
 
-.locate-content h3{
+.contact-content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: transparent;
+  gap: 15px;
+}
+
+.locate-content h3,
+.contact-content h3{
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 0;
   color: #fff;
 }
 
-.locate-content p{
+.locate-content p,
+.contact-content p{
   font-size: 20px;
   color: #fff;
   margin: 0;
+}
+
+.contact-content .social-links{
+  display: flex;
+  gap: 15px;
+}
+
+.contact-content .social-link{
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-content .social-link:hover{
+  color: #ddd;
 }
 
 .loc-content{
@@ -1439,9 +1476,16 @@ body {
 }
 
 @media screen and (max-width: 890px) {
-  .locate-content{
+  .locate-contact-wrapper{
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .locate-content,
+  .contact-content{
     width: 100%;
-    display: flex;
+    align-items: flex-start;
   }
 }
 
