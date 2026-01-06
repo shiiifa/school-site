@@ -457,11 +457,23 @@ header li{
     align-items: flex-start;
     max-width: 900px;
     margin-left: 0;
+    margin-top: 60px;
   }
 
   .proprietor-message-text {
     flex: 1;
     width: 100%;
+  }
+
+  #courses .proprietor-quote {
+    color: rgba(255, 255, 255, 0.829);
+    font-size: 15px;
+    line-height: 24px;
+    font-style: italic;
+    text-align: left;
+    margin: 0;
+    position: relative;
+    padding-left: 25px;
   }
 
   .proprietor-quote {
@@ -481,6 +493,10 @@ header li{
     vertical-align: -0.4em;
     opacity: 0.3;
     font-family: Georgia, serif;
+  }
+
+  #courses .quote-mark {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   .quote-start {
