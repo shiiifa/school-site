@@ -188,10 +188,12 @@ header li{
     display: flex;
     align-items: center;
     flex: 0 0 auto;
+    margin-left: -10px;
+    padding-left: 10px;
   }
 
   .navbar-logo-img {
-    max-width: 80px;
+    max-width: 50px;
     height: auto;
     display: block;
   }
@@ -1488,7 +1490,11 @@ footer ul li a:hover{
 
   @media screen and (max-width: 600px) {
     .navbar-logo-img {
-      max-width: 60px;
+      max-width: 40px;
+    }
+    .navbar-logo {
+      margin-left: -5px;
+      padding-left: 5px;
     }
     .navbar-links {
       display: none;
