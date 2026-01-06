@@ -864,8 +864,8 @@ header li{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
   }
 
   .stat-item {
@@ -874,21 +874,33 @@ header li{
     align-items: center;
     justify-content: center;
     list-style: none;
+    gap: 8px;
+  }
+
+  .stat-icon {
+    font-size: 32px;
+    color: #1E1A3E;
+    margin-bottom: 5px;
   }
 
   .stat-number {
     font-size: 36px;
     font-weight: bold;
     color: #1E1A3E;
-    margin-bottom: 10px;
+    margin: 0;
     line-height: 1;
     list-style: none;
   }
 
-  .stat-number::before,
-  .stat-number::after {
-    display: none !important;
-    content: none !important;
+  .stat-number::-webkit-inner-spin-button,
+  .stat-number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .stat-number[type="number"] {
+    -moz-appearance: textfield;
+    appearance: none;
   }
 
   #stats .card {
@@ -897,15 +909,9 @@ header li{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 15px;
+    padding: 15px 10px;
     margin: 0;
     width: 100%;
-  }
-
-  .stat-icon {
-    font-size: 28px;
-    color: #1E1A3E;
-    margin-bottom: 8px;
   }
 
   #stats .label {
