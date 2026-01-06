@@ -466,6 +466,42 @@ header li{
     overflow: hidden;
   }
 
+  .proprietor-message-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .proprietor-message-text-centered {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .proprietor-quote-centered {
+    color: #666;
+    font-size: 15px;
+    line-height: 24px;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+  }
+
+  .proprietor-quote-centered .quote-start {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-right: 5px;
+  }
+
+  .proprietor-quote-centered .quote-end {
+    margin-left: 5px;
+  }
+
   #courses .proprietor-quote {
     color: rgba(255, 255, 255, 0.829);
     font-size: 15px;
