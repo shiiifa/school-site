@@ -847,14 +847,14 @@ header li{
     padding-bottom: 20px;
   }
   .stats-left h3{
-    color: rgba(255, 255, 255, 0.829);
+    color: #1e1a3e;
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 20px;
   }
 
   .stats-left p{
-    color: rgba(255, 255, 255, 0.829);
+    color: #333;
   }
 
   .stats-image{
@@ -870,8 +870,8 @@ header li{
   }
 
   #stats{
-    background-color: #070131;
-    color: rgba(255, 255, 255, 0.829);
+    background-color: #fff;
+    color: #333;
     padding: 100px 0px;
     margin-bottom: 0;
   }
@@ -879,11 +879,11 @@ header li{
   .stats-right{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
     flex-wrap: wrap;
     margin-top: 30px;
+    width: 100%;
   }
 
   .stat-item {
@@ -897,14 +897,14 @@ header li{
 
   .stat-icon {
     font-size: 32px;
-    color: rgba(255, 255, 255, 0.829);
+    color: #1E1A3E;
     margin-bottom: 5px;
   }
 
   .stat-number {
     font-size: 36px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.829);
+    color: #1E1A3E;
     margin: 0;
     line-height: 1;
     list-style: none;
@@ -933,7 +933,7 @@ header li{
   }
 
   #stats .label {
-    color: rgba(255, 255, 255, 0.829);
+    color: #333;
     font-size: 14px;
     text-align: center;
     margin: 0;
